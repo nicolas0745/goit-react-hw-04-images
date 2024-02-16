@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useImages } from 'components/context/ImageContext';
+import PropTypes from 'prop-types';
 
 const ImageGallery = ({ list }) => {
   const { openModal } = useImages();
@@ -25,5 +26,7 @@ const ImageGallery = ({ list }) => {
     </ul>
   );
 };
-
+ImageGallery.propTypes = {
+  list: PropTypes.array,
+};
 export { ImageGallery };

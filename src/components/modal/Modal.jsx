@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useImages } from 'components/context/ImageContext';
+import PropTypes from 'prop-types';
 
 const Modal = ({ src, alt }) => {
   const { openModal } = useImages();
@@ -32,6 +33,11 @@ const Modal = ({ src, alt }) => {
       </div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  src: PropTypes.any,
+  alt: PropTypes.any,
 };
 
 export { Modal };
